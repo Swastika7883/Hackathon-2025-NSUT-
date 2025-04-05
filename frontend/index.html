@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Request System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+          <h2 class="nav-logo"><i class="fas fa-heartbeat"></i> Health Hub</h2>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#patient-info">Patient Info</a></li>
+            <li><a href="#select-doctor">Select Doctor</a></li>
+            <li><a href="#voice-request">Voice Request</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+
+    <div class="hero" id ="home">
+        <div class="hero-content">
+          <h1>Welcome to Health Hub</h1>
+          <p>Your wellness, our priority.</p>
+        </div>
+      </div>
+      
+
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-hospital-alt"></i> Hospital Patient Request</h1>
+        </header>
+        
+        <div class="patient-info-card" id="patient-info">
+            <h2><i class="fas fa-user-injured"></i> Patient Information</h2>
+            <div class="form-group">
+                <label for="patient-name">Full Name:</label>
+                <input type="text" id="patient-name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="patient-age">Age:</label>
+                <input type="number" id="patient-age" placeholder="45" min="1" max="120" required>
+            </div>
+            <div class="form-group">
+                <label for="room-number">Room/Bed Number:</label>
+                <input type="text" id="room-number" placeholder="Room 205-B" required>
+            </div>
+        </div>
+
+        <div class="doctor-selection-card"  id="select-doctor">
+            <h2><i class="fas fa-user-md"></i> Select Doctor</h2>
+            <div class="form-group">
+                <label for="department">Department:</label>
+                <select id="department" onchange="updateDoctors()">
+                    <option value="">Select Department</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="neurology">Neurology</option>
+                    <option value="orthopedics">Orthopedics</option>
+                    <option value="general">General Medicine</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="doctor">Available Doctors:</label>
+                <select id="doctor" disabled>
+                    <option value="">Select Department First</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="voice-request-card" id="voice-request">
+            <h2><i class="fas fa-microphone"></i> Voice Request</h2>
+            <p class="instructions">Press and hold the button below to record your message to the doctor</p>
+            
+            <div class="recording-container">
+                <button id="recordButton" class="record-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <div class="recording-status">
+                    <div id="statusIndicator" class="status-indicator"></div>
+                    <span id="statusText">Ready to record</span>
+                </div>
+            </div>
+            
+            <div id="transcriptContainer" class="transcript-container hidden">
+                <h3>Your Message:</h3>
+                <div id="transcript" class="transcript-text"></div>
+                <div class="action-buttons">
+                    <button id="sendButton" class="btn-send" disabled>
+                        <i class="fas fa-paper-plane"></i> Send to Doctor
+                    </button>
+                    <button id="cancelButton" class="btn-cancel">
+                        <i class="fas fa-times"></i> Cancel
+                    </button>
+                </div>
+            </div>
+            
+            <div id="confirmation" class="confirmation hidden">
+                <i class="fas fa-check-circle"></i>
+                <h3>Message Sent Successfully!</h3>
+                <p>Your doctor has been notified and will respond shortly.</p>
+                <button id="newRequestButton" class="btn-new">
+                    <i class="fas fa-plus"></i> New Request
+                </button>
+            </div>
+        </div>
+    </div>
+
+  
+
+    <script src="script.js"></script>
+</body>
+</html>
