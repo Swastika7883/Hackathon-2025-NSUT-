@@ -1,0 +1,1 @@
+Serial No.,Timestamp,Patient ID,Name,Age,Original Speech,Translated Text,Language
