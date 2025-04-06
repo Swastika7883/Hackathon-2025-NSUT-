@@ -1,1 +1,11 @@
-Serial No.,Timestamp,Patient ID,Name,Age,Original Speech,Translated Text,Language
+0,2025-04-05 23:54:54,12,Aditya Tripathi,2,hello,Hello,en
+1,2025-04-05 23:57:55,12,atr,59,I have stomach ache,I have stomach ache,en
+2,2025-04-06 01:57:21,123,asha,22,hello HR coders,hello HR coders,en
+3,2025-04-06 06:08:49,221,aasha,34,hi I am having fever,Hi I am Having Fever,en
+4,2025-04-06 06:09:16,221,aasha,34,I am having fever,J'ai de la fièvre,fr
+5,2025-04-06 07:43:04,54,jfjh,59,stomach is eating,stomach is eating,en
+6,2025-04-06 07:43:09,54,jfjh,59,stom,stom,en
+7,2025-04-06 07:56:45,3,adads,33,I am having stomach cake,I am having stomach cake,en
+8,2025-04-06 07:58:32,3,adads,33,my head is eating,my head is eating,en
+9,2025-04-06 08:10:04,221,ad,34,I want to sleep,I Want To Sleep,en
+10,2025-04-06 09:36:03,132,aditya,32,I need urgent Health Minister,Ich brauche dringende Gesundheitsminister,de
